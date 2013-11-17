@@ -152,7 +152,7 @@ if __name__ == '__main__':
     else:
         port = 8000
 
-    from App.Authentication import Authentication
+    from app.Authentication import Authentication
     ChatHTTPServer.mount(
         apps = (
             ('/auth', Authentication),
