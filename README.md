@@ -24,4 +24,5 @@ Tips
 ----
 
 CTRL-D    EOF of stdin
+
 CTRL-C    exit

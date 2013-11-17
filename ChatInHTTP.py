@@ -49,11 +49,13 @@ def getargs():
         host = args[0]
         try:
             port = int(args[1])
-        except (IndexError, ValueError):
+        except IndexError:
             port = 80
+        except ValueError:
+            raise getopt.GetoptError('see usage')
 
         return (host, port, show_body, show_icon)
-    except (getopt.GetoptError, ValueError):
+    except getopt.GetoptError:
         sys.stderr.write(__doc__)
         sys.exit(1)
 
